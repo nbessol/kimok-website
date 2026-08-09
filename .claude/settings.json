@@ -4,7 +4,11 @@
       "Bash(mkdir -p \"/Users/nicolasbessol/Documents/Kimok/kimok-app/website/public/fonts\" && cp \"/Users/nicolasbessol/Documents/Kimok/kimok-app/client/public/fonts/\"*.otf \"/Users/nicolasbessol/Documents/Kimok/kimok-app/website/public/fonts/\" && ls \"/Users/nicolasbessol/Documents/Kimok/kimok-app/website/public/fonts\")",
       "Bash(file *.png)",
       "Bash(sips -g pixelWidth -g pixelHeight *.png)",
-      "Bash(npx vite *)"
+      "Bash(npx vite *)",
+      "Bash(npm run *)",
+      "Bash(nvm --version)",
+      "Bash(git check-ignore *)",
+      "Bash(pkill -f \"vite --port 5183\")"
     ],
     "additionalDirectories": [
       "/Users/nicolasbessol/Documents/Kimok/kimok-app/client/public/fonts"

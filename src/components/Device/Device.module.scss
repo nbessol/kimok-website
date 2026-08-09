@@ -25,4 +25,25 @@
             width: 390px;
         }
     }
+
+    @media (max-width: 450px) {
+        height: 500px;
+        padding-bottom: 40px;
+
+        &Button {
+            margin-top: 40px;
+
+            button {
+                width: 300px;
+            }
+        }
+
+        &Image {
+            margin-top: 40px;
+
+            img {
+                width: 350px;
+            }
+        }
+    }
 }

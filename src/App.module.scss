@@ -47,23 +47,14 @@
             z-index: 1;
         }
 
-        &CatTwo {
-            width: 268px;
-            position: absolute;
-            bottom: -40px;
-            right: 11%;
-            transform: translateX(-50%);
-            z-index: 1;
-            animation: frameFade2 2s ease-in-out infinite;
-        }
-
         &Plant {
             width: 130px;
             position: absolute;
             top: -50px;
-            left: 200px;
+            right: 300px;
             filter: drop-shadow(100px 63px 7px  rgba(219,235,238,0.7));
             animation: floatY 5s ease-in-out infinite;
+            filter: blur(4px);
         }
 
         &Smile {
@@ -94,6 +85,7 @@
             filter: drop-shadow(60px 130px 7px  rgba(219,235,238,0.7));
             animation: floatY 6.5s ease-in-out infinite;
             animation-delay: -4.5s;
+            filter: blur(4px);
         }
 
         &Logo {
@@ -155,6 +147,76 @@
             }
 
         }
+
+        @media (max-width: 450px) {
+            width: 100%;
+            border-radius: 0 0 20px 20px;
+
+            &Machine {
+                width: 160px;
+                bottom: -15px;
+            }
+
+            &MachineBubbles {
+                bottom: 45px;
+                transform: translateX(-50%) scale(0.45);
+                transform-origin: bottom center;
+            }
+
+            &CatOne {
+                width: 115px;
+                bottom: -15px;
+            }
+
+            &Plant,
+            &Smile,
+            &Bucket,
+            &Cook {
+                display: none;
+            }
+
+            &Logo {
+                margin-top: 60px;
+            }
+
+            &Title {
+                margin-top: 30px;
+
+                h1 {
+                    font-size: 32px;
+                    width: 90%;
+                    margin-top: 0;
+                }
+            }
+
+            &Buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+
+                & > button {
+                    width: 100%;
+                    max-width: 300px;
+                }
+            }
+
+            &MainScreen {
+                margin: 60px auto 0 auto;
+
+                &Iphone img {
+                    width: 220px;
+                }
+
+                &Egg {
+                    left: -15px;
+                    top: -15px;
+
+                    img {
+                        width: 55px;
+                    }
+                }
+            }
+        }
     }
 
     &Pros {
@@ -196,6 +258,10 @@
             width: max-content;
             animation: prosMarquee 20s linear infinite;
         }
+
+        @media (max-width: 450px) {
+            margin-top: 40px;
+        }
     }
 
     &Blocks {
@@ -206,6 +272,15 @@
         width: 1200px;
         flex-direction: column;
         gap: 120px;
+
+        @media (max-width: 450px) {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            width: 100%;
+            padding: 0 24px;
+            box-sizing: border-box;
+            gap: 50px;
+        }
     }
 
     &Devices {
@@ -213,6 +288,10 @@
         padding-bottom: 100px;
         background-color: #ECF7F9;
         width: 100%;
+
+        @media (max-width: 450px) {
+            padding-bottom: 20px;
+        }
 
         &Inner {
             width: 1400px;
@@ -223,6 +302,19 @@
 
             &Device {
                 width: 48%;
+            }
+
+            @media (max-width: 450px) {
+                flex-direction: column;
+                width: 100%;
+                margin: 80px auto 0 auto;
+                padding: 0 24px;
+                box-sizing: border-box;
+                gap: 40px;
+
+                &Device {
+                    width: 100%;
+                }
             }
         }
     }
@@ -239,6 +331,9 @@
             background-color: transparent;
         }
 
+        @media (max-width: 450px) {
+            display: none;
+        }
     }
 
     &FAQ {
@@ -266,6 +361,21 @@
         flex-direction: column;
         gap: 10px;
     }
+
+            @media (max-width: 450px) {
+                width: 100%;
+                margin: 0 auto 60px auto;
+
+                &Title {
+                    font-size: 26px;
+                }
+
+                &Questions {
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
         }
 
 
@@ -273,7 +383,7 @@
     }
 
     &Footer {
-        padding: 50px 0 100px 0;
+        padding: 50px 0 0px 0;
         width: 100%;
         background-color: #ECF7F9;
         text-align: center;
@@ -281,6 +391,18 @@
 
         a {
             color: $secondary;
+        }
+    }
+
+        &Privacy {
+        padding: 50px 0 50px 0;
+        width: 100%;
+        background-color: #ECF7F9;
+        text-align: center;
+        @include smallText;
+
+        a {
+            color: $primary;
         }
     }
 
