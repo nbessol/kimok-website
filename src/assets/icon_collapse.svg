@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="3px" viewBox="0 0 29 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Path</title>
+    <g id="OnBoarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-16" transform="translate(-1488.000000, -5857.000000)" fill="#112233" fill-rule="nonzero">
+            <g id="FAQ" transform="translate(350.000000, 5669.000000)">
+                <g id="Group-16" transform="translate(0.000000, 139.000000)">
+                    <path d="M1166.07143,49.5714286 L1138.92857,49.5714286 C1138.416,49.5714286 1138,49.9874286 1138,50.5 C1138,51.0125714 1138.416,51.4285714 1138.92857,51.4285714 L1166.07143,51.4285714 C1166.584,51.4285714 1167,51.0125714 1167,50.5 C1167,49.9874286 1166.584,49.5714286 1166.07143,49.5714286 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

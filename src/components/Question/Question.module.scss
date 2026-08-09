@@ -1,0 +1,66 @@
+@use 'colors' as *;
+@use 'fonts' as *;
+
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 40px;
+        cursor: pointer;
+
+
+    &Left {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &Question {
+            @include regularText;
+            font-size: 30px;
+        }
+
+        &AnswerWrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            opacity: 0;
+            transition: grid-template-rows 0.35s ease, opacity 0.25s ease;
+
+            &.expanded {
+                grid-template-rows: 1fr;
+                opacity: 1;
+                margin-top: 20px;
+            }
+        }
+
+        &Answer {
+            @include regularText;
+            font-size: 20px;
+            overflow: hidden;
+            min-height: 0;
+        }
+    }
+
+    &Right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 6px;
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.iconExpanded {
+    transform: rotate(180deg);
+}

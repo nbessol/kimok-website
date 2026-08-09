@@ -1,0 +1,50 @@
+@use 'colors' as *;
+@use 'fonts' as *;
+
+.container {
+    box-sizing: border-box;
+    width: 345px;
+    height: 380px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    // padding: 50px;
+    padding: 0 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: translate 0.8s ease, rotate 0.8s ease;
+    animation: reviewCardIn 0.5s ease;
+
+    &UserName {
+        @include regularText;
+        margin-top: 50px;
+    }
+
+    &Score {
+        display: flex;
+        margin-top: 40px;
+        gap: 10px;
+    }
+
+    &Text {
+        @include buttonText;
+        margin-top: 20px;
+    }
+
+    &Platform {
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        img {
+            width: 16px;
+        }
+    }
+}
+
+@keyframes reviewCardIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

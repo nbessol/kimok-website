@@ -1,0 +1,305 @@
+@use 'colors' as *;
+@use 'fonts' as *;
+
+.container {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+    &Header {
+        width: 1400px;
+        background-color: #ECF7F9;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        border-radius: 0 0 40px 40px;
+
+        &Machine {
+            width: 370px;
+            position: absolute;
+            bottom: -38px;
+            left: 40%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        &MachineBubbles {
+            position: absolute;
+            top: auto;
+            right: auto;
+            bottom: 100px;
+            left: 42%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        &CatOne{
+            width: 268px;
+            position: absolute;
+            bottom: -40px;
+            right: 11%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        &CatTwo {
+            width: 268px;
+            position: absolute;
+            bottom: -40px;
+            right: 11%;
+            transform: translateX(-50%);
+            z-index: 1;
+            animation: frameFade2 2s ease-in-out infinite;
+        }
+
+        &Plant {
+            width: 130px;
+            position: absolute;
+            top: -50px;
+            left: 200px;
+            filter: drop-shadow(100px 63px 7px  rgba(219,235,238,0.7));
+            animation: floatY 5s ease-in-out infinite;
+        }
+
+        &Smile {
+            width: 150px;
+            position: absolute;
+            top: 50%;
+            right: 240px;
+            filter: drop-shadow(-60px 100px 7px  rgba(219,235,238,0.7));
+            animation: floatY 6s ease-in-out infinite;
+            animation-delay: -1.5s;
+        }
+
+        &Bucket {
+            width: 220px;
+            position: absolute;
+            top: 70%;
+            right: -30px;
+            filter: drop-shadow(-60px 100px 7px  rgba(219,235,238,0.7));
+            animation: floatY 5.5s ease-in-out infinite;
+            animation-delay: -3s;
+        }
+
+        &Cook {
+            width: 200px;
+            position: absolute;
+            top: 60%;
+            left: 130px;
+            filter: drop-shadow(60px 130px 7px  rgba(219,235,238,0.7));
+            animation: floatY 6.5s ease-in-out infinite;
+            animation-delay: -4.5s;
+        }
+
+        &Logo {
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            img{
+            width: 100px;
+        }
+        }
+
+        &Title {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+        h1 {
+            @include hugeText;
+            margin-top: 120px;
+            text-align: center;
+            width: 950px;
+        }
+        }
+
+        &Buttons {
+            margin-top: 0px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        &MainScreen {
+            display: flex;
+            justify-content: center;
+            width: fit-content;
+            text-align: center;
+            margin: 190px auto 0 auto;
+            padding: 0;
+            position: relative;
+
+            &Iphone {
+                margin: 0;
+                padding: 0;
+                display: flex;
+
+                img {
+                    width: 390px;
+                }
+            }
+
+            &Egg {
+                position: absolute;
+                left: -30px;
+                top: -30px;
+                img {
+                    width: 100px;
+                    filter: drop-shadow(60px 130px 7px  rgba(17, 35, 51, 0.1));
+                }
+            }
+
+        }
+    }
+
+    &Pros {
+        margin-top: 150px;
+        width: 100%;
+        max-width: 1200px;
+        position: relative;
+        overflow: hidden;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 120px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        &::before {
+            left: 0;
+            background: linear-gradient(to right, $white 20%, transparent);
+            mask-image: linear-gradient(to right, black 20%, transparent);
+            -webkit-mask-image: linear-gradient(to right, black 20%, transparent);
+        }
+
+        &::after {
+            right: 0;
+            background: linear-gradient(to left, $white 20%, transparent);
+            mask-image: linear-gradient(to left, black 20%, transparent);
+            -webkit-mask-image: linear-gradient(to left, black 20%, transparent);
+        }
+
+        &Track {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: max-content;
+            animation: prosMarquee 20s linear infinite;
+        }
+    }
+
+    &Blocks {
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        margin-bottom: 100px;
+        width: 1200px;
+        flex-direction: column;
+        gap: 120px;
+    }
+
+    &Devices {
+        margin-top: 100px;
+        padding-bottom: 100px;
+        background-color: #ECF7F9;
+        width: 100%;
+
+        &Inner {
+            width: 1400px;
+            margin: 200px auto 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &Device {
+                width: 48%;
+            }
+        }
+    }
+
+    &Arrow {
+         background-color: #ECF7F9;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+        img {
+            width: 260px;
+            height: auto;
+            margin-left: 600px;
+            background-color: transparent;
+        }
+
+    }
+
+    &FAQ {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #ECF7F9;
+
+        &Inner {
+            width: 1200px;
+            margin: 250px auto 100px auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+                 &Title {
+            @include hugeText;
+            font-size: 50px;
+            text-align: center;
+            }
+
+                &Questions {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+        }
+
+
+   
+    }
+
+    &Footer {
+        padding: 50px 0 100px 0;
+        width: 100%;
+        background-color: #ECF7F9;
+        text-align: center;
+        @include regularText;
+
+        a {
+            color: $secondary;
+        }
+    }
+
+
+}
+
+@keyframes floatY {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-14px); }
+}
+
+@keyframes frameFade2 {
+    0%, 10%   { opacity: 0; }
+    40%, 60%  { opacity: 1; }
+    90%, 100% { opacity: 0; }
+}
+
+@keyframes prosMarquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-25%); }
+}
+

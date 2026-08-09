@@ -1,0 +1,24 @@
+.splitTitle {
+    display: inline;
+}
+
+.word {
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1;
+    vertical-align: top;
+}
+
+.charWrap {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    line-height: 1;
+    vertical-align: top;
+}
+
+.char {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: top;
+}

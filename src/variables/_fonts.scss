@@ -1,0 +1,89 @@
+@use "colors" as *;
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Light Az.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Regular Az.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Medium Az.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Semi Bold Az.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("/fonts/Sofia Pro Bold Az.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin hugeText {
+  font-family: "Sofia Pro", sans-serif;
+  font-size: 70px;
+  font-weight: 500;
+  color: $primary;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+@mixin veryBigText {
+  font-family: "Sofia Pro", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: $primary;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+@mixin bigText {
+  font-family: "Sofia Pro", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: $primary;
+  letter-spacing: -0.5px;
+}
+
+@mixin buttonText {
+  font-family: "Sofia Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@mixin regularText {
+  font-family: "Sofia Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: $primary;
+}
+
+@mixin subtitleText {
+  font-family: "Sofia Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: $primary-light;
+}
+
+@mixin smallText {
+  font-family: "Sofia Pro", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: $primary;
+}

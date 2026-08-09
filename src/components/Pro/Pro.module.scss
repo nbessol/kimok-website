@@ -1,0 +1,32 @@
+@use 'colors' as *;
+@use 'fonts' as *;
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid #EDF8FA;
+    gap: 10px;
+    padding: 0 20px;
+    border-radius: 10px;
+
+    &Icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+        img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        flex-shrink: 0;
+        }
+    }
+
+    &Title {
+        @include regularText;
+        margin-top:4px;
+    }
+}

@@ -1,0 +1,30 @@
+.container {
+    background-color: #ECF7F9;
+    padding: 200px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    &Track {
+        position: relative;
+        flex-shrink: 0;
+        width: var(--track-width);
+        height: var(--track-height);
+    }
+
+    &Trash {
+        position: absolute;
+        bottom: -150px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+            width: 524px;
+            height: auto;
+        }
+
+        z-index: 1;
+    }
+}

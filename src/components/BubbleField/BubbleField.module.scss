@@ -1,0 +1,109 @@
+.bubbles {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.bubble {
+  --size: 12px;
+  --left: 0px;
+  --duration: 6s;
+  --delay: 0s;
+
+  position: absolute;
+  bottom: -50px;
+  left: calc(50% + var(--left));
+
+  width: var(--size);
+  height: var(--size);
+
+  border-radius: 50%;
+
+  opacity: 0;
+
+  /* Aspect bulle de savon */
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.9),
+    rgba(193, 241, 255, 0.3) 35%,
+    rgba(193, 241, 255, 0.08) 70%
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  box-shadow:
+    inset calc(var(--size) * 0.2) 0 0 rgba(255, 255, 255, 0.5),
+    inset calc(var(--size) * -0.1) 0 0 rgba(173, 216, 230, 0.2),
+    0 0 8px rgba(193, 241, 255, 0.4);
+
+  animation: bubbleFloat var(--duration) linear infinite;
+  animation-delay: var(--delay);
+
+  /* reflet principal */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 18%;
+    left: 22%;
+    width: 28%;
+    height: 28%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    filter: blur(1px);
+  }
+
+  /* reflet secondaire */
+  &::after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 55%;
+    width: 12%;
+    height: 12%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    filter: blur(1px);
+  }
+}
+
+/* bulles lentes */
+.bubble:nth-child(3n) {
+  animation-duration: calc(var(--duration) + 2s);
+}
+
+/* bulles rapides */
+.bubble:nth-child(3n + 1) {
+  animation-duration: calc(var(--duration) - 1s);
+}
+
+/* bulles moyennes */
+.bubble:nth-child(3n + 2) {
+  animation-duration: var(--duration);
+}
+
+@keyframes bubbleFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.7);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.9;
+  }
+  20% {
+    transform: translate3d(-20px, -230px, 0) scale(0.85);
+  }
+  40% {
+    transform: translate3d(25px, -520px, 0) scale(1);
+  }
+  60% {
+    transform: translate3d(-18px, -870px, 0) scale(1.05);
+  }
+  80% {
+    transform: translate3d(20px, -1220px, 0) scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(-8px, -1600px, 0) scale(1.15);
+    opacity: 0;
+  }
+}
