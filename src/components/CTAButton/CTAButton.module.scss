@@ -2,14 +2,21 @@
 @use 'fonts' as *;
 
 .container {
+    position: relative;
     height: 60px;
-    width: 180px;
     background-color: #100F0D;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 30px;
     border:none;
+    padding: 0 30px;
+    cursor: pointer;
+
+    &Disabled {
+        cursor: not-allowed;
+    }
+
 
     img {
         width: 15px;
@@ -20,5 +27,22 @@
         @include buttonText;
         color: white;
         margin-left: 10px;
+
+    }
+
+    &Tooltip {
+        position: absolute;
+        top: -14px;
+        right: -10px;
+        padding: 6px 10px;
+        border-radius: 20px;
+        background-color: white;
+        color: $primary;
+        font-size: 12px;
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 10;
+        box-shadow: 0 4px 12px rgba(16, 15, 13, 0.15);
     }
 }
+

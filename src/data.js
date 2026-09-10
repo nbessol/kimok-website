@@ -17,7 +17,7 @@ const frequentlyAskedQuestions = [
     },
     {
         title: 'Comment obtenir de l\'aide ou faire une suggestion ?',
-        answer: "Pour obtenir de l'aide ou faire une suggestion, vous pouvez contacter notre support via l'application ou envoyer un email à support@kimok.com.",
+        answer: "Pour obtenir de l'aide ou faire une suggestion, vous pouvez contacter notre support via l'application ou envoyer un email à nicolasbessol@gmail.com",
     },
 
 ]

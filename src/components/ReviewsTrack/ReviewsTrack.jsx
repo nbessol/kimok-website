@@ -3,39 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import styles from './ReviewsTrack.module.scss'
 import Trash from '../../assets/trash.png'
 import Review from '../Review/Review'
-
-const reviews = [
-  {
-    userName: "Nicolas",
-    score: 5,
-    text: "Super application, très pratique et intuitive. Je recommande !",
-    platform: "android",
-  },
-  {
-    userName: "Benjamin",
-    score: 4.3,
-    text: "Super application, très pratique et intuitive. Je recommande !",
-    platform: "ios",
-  },
-  {
-    userName: "Alice",
-    score: 4,
-    text: "Super application, très pratique et intuitive. Je recommande !",
-    platform: "ios",
-  },
-  {
-    userName: "Tiphaine",
-    score: 2,
-    text: "Super application, très pratique et intuitive. Je recommande !",
-    platform: "ios",
-  },
-  {
-    userName: "Claire",
-    score: 3.6,
-    text: "Super application, très pratique et intuitive. Je recommande !",
-    platform: "ios",
-  }
-]
+import reviews from '../../data/reviews.json'
 
 // slots slide physically from right to left; slot 0 = leftmost, SLOT_COUNT-1 = rightmost.
 // 2 extra slots on top of the 5 "focus" ones so a card always bleeds off both edges, no empty gap.
