@@ -11,7 +11,6 @@ import Machine from './assets/machine.png'
 import Smile from './assets/smile.png'
 import Bucket from './assets/bucket.png'
 import CatOne from './assets/cat_01.png'
-import CatTwo from './assets/cat_02.png'
 import Arrow from './assets/arrow.png'
 
 import Pro from './components/Pro/Pro'
@@ -47,8 +46,6 @@ const App =() => {
       <img className={styles.containerHeaderMachine} src={Machine} alt="machine" />
       <BubbleField className={styles.containerHeaderMachineBubbles} width={50} height={150} />
       <img className={styles.containerHeaderCatOne} src={CatOne} alt="cat one" />
-      <img className={styles.containerHeaderCatTwo} src={CatTwo} alt="cat two" />
-
     <div className={styles.containerHeaderLogo}>
       <img src={AppLogo} alt="logo" />
     </div>
@@ -115,13 +112,23 @@ const App =() => {
     <div className={styles.containerFooter}>
       {"Un projet réalisé et maintenu par "}
       <a
-        href="https://ton-site.com" // Remplace par ton URL
+        href="https://www.linkedin.com/in/nbessol/" // Remplace par ton URL
         target="_blank"
         rel="noopener noreferrer"
       >
        Nicolas Bessol
       </a>
+    
     </div>
+    <div className={styles.containerPrivacy}>
+        <a
+        href="/privacy/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Politique de confidentialité
+      </a>
+      </div>
   </div>
   )
 }

@@ -30,7 +30,8 @@
     }
 
     &Text {
-        @include buttonText;
+        @include regularText;
+        font-size: 12px;
         margin-top: 20px;
     }
 
