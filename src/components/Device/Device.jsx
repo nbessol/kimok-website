@@ -16,7 +16,7 @@ const Device = ({type}) => {
     return (
         <div className={styles.container}>
         <div className={styles.containerButton}>
-            <CTAButton type={type} />
+            <CTAButton type={type} isFromDevice={true} />
             </div>
             <div className={styles.containerImage}>
                 <img src={dataByTypes[type].img} alt="main screen" />

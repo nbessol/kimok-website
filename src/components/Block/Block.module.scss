@@ -95,7 +95,7 @@
                 border-radius: 0 16px 16px 0;
                 outline: 1px dotted $border;
                 outline-offset: -1px;
-                height: 60px;
+                height: 80px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -124,12 +124,12 @@
                 border-radius: 16px;
                 transition: width 0.4s ease;
                 margin-left: -5px;
-                height: 60px;
+                height: 80px;
                 z-index: 1;
             }
 
             &UserName {
-                @include regularText;
+                @include bigText;
                 white-space: nowrap;
             }
 
@@ -177,6 +177,29 @@
             }
         }
 
+    }
+
+    @media (max-width: 450px) {
+        justify-content: flex-start;
+
+        &Right {
+            display: none;
+        }
+
+        &Left {
+            width: 100%;
+            margin-top: 0;
+
+            &Title {
+                font-size: 24px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            &Description {
+                width: 100%;
+            }
+        }
     }
 }
 

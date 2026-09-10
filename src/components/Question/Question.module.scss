@@ -7,10 +7,11 @@
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
+    box-sizing: border-box;
     background-color: white;
     border-radius: 20px;
     padding: 30px 40px;
-        cursor: pointer;
+    cursor: pointer;
 
 
     &Left {
@@ -20,7 +21,7 @@
 
         &Question {
             @include regularText;
-            font-size: 30px;
+            font-size: 24px;
         }
 
         &AnswerWrapper {
@@ -38,7 +39,6 @@
 
         &Answer {
             @include regularText;
-            font-size: 20px;
             overflow: hidden;
             min-height: 0;
         }
@@ -53,6 +53,25 @@
         img {
             width: 25px;
             height: 25px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        padding: 20px 24px;
+
+        &Left {
+            &Question {
+                font-size: 16px;
+            }
+
+            &Answer {
+                font-size: 14px;
+            }
+        }
+
+        &Right img {
+            width: 16px;
+            height: 16px;
         }
     }
 }
